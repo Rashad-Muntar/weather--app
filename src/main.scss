@@ -1,183 +1,183 @@
-*{
-    font-family: 'Oswald', sans-serif;
-    padding: 0;
-    margin: 0;
+* {
+  font-family: 'Oswald', sans-serif;
+  padding: 0;
+  margin: 0;
 }
-body{
-    background-image: url('https://wordup411ng.com/wp-content/uploads/2015/12/dark-clouds.jpg');
-    height: 100vh;
-    width: 100vw;
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
-    overflow-y: hidden;
 
-    .brand{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: rgb(255, 255, 255);
-        position:  relative;
-        width: 100%;
-        margin: 0 auto;
-        margin-left: 20px;
-        margin-top: 70px;
-        margin-bottom: 0;
-        text-align: center;
-    }
+body {
+  background-image: url('https://wordup411ng.com/wp-content/uploads/2015/12/dark-clouds.jpg');
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  overflow-y: hidden;
 
-    main{
-        margin: 0 auto;
-        height: 80%;
+  .brand {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 20px;
+    margin-top: 70px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  main {
+    margin: 0 auto;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+
+    .main-Content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background-color: rgba(230, 230, 230, 0.35);
+      box-shadow: 0 1px 36px -12px rgba(233, 233, 233, 0.75);
+      -webkit-box-shadow: 0 1px 36px -12px rgba(233, 233, 233, 0.75);
+      -moz-box-shadow: 0 1px 36px -12px rgba(233, 233, 233, 0.75);
+      width: 50%;
+      flex-direction: column;
+      height: 70%;
+      position: absolute;
+      margin-top: 0;
+
+      .iconArea {
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      form {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        opacity: 1;
+
+        input {
+          background-color: transparent;
+          height: 40px;
+          width: 300px;
+          border: none;
+          border-bottom: 1px solid rgb(214, 214, 214);
+          margin-bottom: 15px;
+          color: white;
+          margin-top: 20px;
+          border-radius: 7px;
+          padding-left: 10px;
+          transition: 300ms;
+
+          &:focus {
+            outline: none;
+            background-color: rgba(230, 230, 230, 0.35);
+            font-weight: 600;
+            font-size: 1.1em;
+          }
+        }
+
+        .submit-btn {
+          height: 30px;
+          width: 100px;
+          border: none;
+          font-size: 1.2em;
+          font-weight: 600;
+          border-radius: 7px;
+          color: rgb(62, 79, 110);
+          background-color: rgba(230, 230, 230, 0.35);
+          cursor: pointer;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .data {
+        margin-left: 0;
+        color: white;
+      }
+
+      .switchContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+
+      .medChange {
+        background: lightgray;
+        height: 20px;
+        width: 50px;
+        border-radius: 20px;
+        position: relative;
+        margin: 0 5px;
+
+        .btn {
+          height: 100%;
+          width: 20px;
+          border-radius: 100%;
+          background-color: white;
+          transition: 300ms;
+          cursor: pointer;
+        }
+      }
+
+      .text-line {
+        margin: 0;
+        padding: 0;
+        color: orange;
+        margin-top: 7px;
+      }
+
+      .humidArea {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+          margin-right: 10px;
+          margin-bottom: 20px;
+          font-weight: 600;
+          font-size: 1.1em;
+        }
+      }
+
+      h3 {
         padding: 0;
         margin: 0;
+      }
 
-        .main-Content{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            background-color: rgba(230, 230, 230, 0.35);
-            box-shadow: 0px 1px 36px -12px rgba(233,233,233,0.75);
-            -webkit-box-shadow: 0px 1px 36px -12px rgba(233,233,233,0.75);
-            -moz-box-shadow: 0px 1px 36px -12px rgba(233,233,233,0.75);
-            width: 50%;
-            flex-direction: column;
-            height: 70%;
-            position: absolute;
-            margin-top: 0;
-
-            .iconArea{
-                display: flex;
-                align-items: center;
-            }
-            p{
-                margin: 0;
-                padding: 0;
-            }
-
-            form{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                opacity: 1;
-                
-                input{
-                    background-color: transparent;
-                    height: 40px;
-                    width: 300px;
-                    border: none;
-                    border-bottom: 1px solid rgb(214, 214, 214);
-                    margin-bottom: 15px;
-                    color: white;
-                    margin-top: 20px;
-                    border-radius: 7px;
-                    padding-left: 10px;
-                    transition: 300ms;
-                    
-
-                    &:focus{
-                        outline: none;
-                        background-color: rgba(230, 230, 230, 0.35);
-                        font-weight: 600;
-                        font-size: 1.1em;
-
-                    }
-                }
-
-               .submit-btn{
-                   height: 30px;
-                   width: 100px;
-                   border: none;
-                   font-size: 1.2em;
-                   font-weight: 600;
-                    border-radius: 7px;
-                    color: rgb(62, 79, 110);
-                    background-color: rgba(230, 230, 230, 0.35);
-                    cursor: pointer;
-
-                   &:focus{
-                       outline: none;
-
-                   }
-               }
-            }
-
-            .data{
-                margin-left:  0;
-                color: white;
-            }
-            .switchContainer{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 0;
-            }
-            .medChange{
-                background: lightgray;
-                height: 20px;
-                width: 50px;
-                border-radius: 20px;
-                position: relative;
-                margin: 0 5px;
-
-                
-                .btn{
-                    height: 100%;
-                    width: 20px;
-                    border-radius: 100%;
-                    background-color: white;
-                    transition: 300ms;
-                    cursor: pointer;
-                   
-                }
-            }
-            .text-line{
-                margin: 0;
-                padding: 0;
-                color: orange;
-                margin-top: 7px;
-            }
-
-            .humidArea{
-                display: flex;
-                justify-content: space-between;
-                p{
-                    margin-right: 10px;
-                    margin-bottom: 20px;
-                    font-weight: 600;
-                    font-size: 1.1em;
-                }
-            }
-            h3{
-                padding: 0;
-                margin: 0;
-            }
-            .name{
-                font-size: 2.5em;
-            }
-        }
+      .name {
+        font-size: 2.5em;
+      }
     }
-}
-::placeholder{
-    color: white;
-    opacity: 1;
-    font-size: 1.2em;
-    font-weight: 600;
-
-
+  }
 }
 
+::placeholder {
+  color: white;
+  opacity: 1;
+  font-size: 1.2em;
+  font-weight: 600;
+}
 
 //public classes
-.alignRight{
-    position: absolute;
-    right: 0;
+.alignRight {
+  position: absolute;
+  right: 0;
 }
 
-.hide{
-    display: none !important;
+.hide {
+  display: none !important;
 }
