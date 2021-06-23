@@ -1,26 +1,30 @@
 import './main.scss';
 
-const formEvent = () => {
-  let input = document.getElementById("search") 
-  let submit = document.querySelector(".submit-btn")
-  submit.addEventListener("click", ()=>{
+let form = document.getElementById('searchForm')
 
+const formEvent = () => {
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    let input = document.getElementById("search").value 
+    condition(input)
   })
+  
 }
+
 const condition = async (city) => {
   try {
     const response = await fetch(
-      'https://api.openweathermap.org/data/2.5/weather?q=Accra&units=metric&appid=0679cd364149a5af42457cf2053eb25f'
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=0679cd364149a5af42457cf2053eb25f`
       )
   const data = await response.json()
-  return data
+ weatherUpdate(data)
 
   }catch(err){
     console.log(err)
   }
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
+const weatherUpdate = async () => {
   let updates = [];
 
   try {
@@ -63,7 +67,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 console.log(updates.name)
 
-})
+}
 
 const getTime = () => {
   let date = new Date()
