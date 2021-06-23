@@ -1,6 +1,7 @@
 import './main.scss';
 
 let form = document.getElementById('searchForm')
+let measureSwitchBtn = document.querySelector('.btn')
 
 const formEvent = () => {
   form.addEventListener('submit', (e)=>{
@@ -14,26 +15,20 @@ const formEvent = () => {
 const condition = async (city) => {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=0679cd364149a5af42457cf2053eb25f`
+      "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=0679cd364149a5af42457cf2053eb25f", { mode: 'cors' }
       )
   const data = await response.json()
- weatherUpdate(data)
+  weatherUpdate(data)
 
   }catch(err){
     console.log(err)
   }
 }
 
-const weatherUpdate = async () => {
-  let updates = [];
-
-  try {
-    updates =  await condition()
-  }catch(err){
-    console.log(err.messages)
-  }
+const weatherUpdate = async (updates) => {
 
   let dataContainer = document.querySelector(".data")
+  dataContainer.innerHTML = ''
   let name = document.createElement('h3')
   let cond = document.createElement('h3')
   let iconArea = document.createElement('div')
@@ -63,9 +58,7 @@ const weatherUpdate = async () => {
   dataContainer.appendChild(currentCondition)
   dataContainer.appendChild(conditionDesc)
   dataContainer.appendChild(humidity)
-  
 
-console.log(updates.name)
 
 }
 
@@ -125,7 +118,18 @@ const fullTimeStanp = () => {
   return full
 }
 
+document.addEventListener("DOMContentLoaded", ()=>{
+    formEvent()
+})
 
+const measureSwitch = () => {
+  measureSwitchBtn.addEventListener("click", ()=>{
+    measureSwitchBtn.classList.toggle('alignRight')
+    console.log("switch is clicked")
+  })
+}
+
+measureSwitch()
 
 
 

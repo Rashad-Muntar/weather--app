@@ -7,7 +7,6 @@ body{
     background-repeat: repeat;
 
     main{
-        border: 1px solid red;
         margin: 0 auto;
         height: 100%;
         display: flex;
@@ -22,14 +21,20 @@ body{
             background-color: rgba(230, 230, 230, 0.35);
             width: 50%;
             flex-direction: column;
-            height: 50%;
+            height: 70%;
             position: absolute;
 
+            .iconArea{
+                display: flex;
+            }
+            p{
+                margin: 0;
+                padding: 0;
+            }
             h1{
                 font-size: 2.5em;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                 color: rgb(255, 255, 255);
-                border: 1px solid red;
                 margin: 0;
                 padding: 0;
             }
@@ -64,6 +69,7 @@ body{
                     border-radius: 7px;
                     color: rgb(62, 79, 110);
                     background-color: rgba(230, 230, 230, 0.35);
+                    cursor: pointer;
 
                    &:focus{
                        outline: none;
@@ -76,6 +82,34 @@ body{
                 margin-left:  0;
                 color: white;
             }
+            .switchContainer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+            }
+            .medChange{
+                background: lightgray;
+                height: 20px;
+                width: 50px;
+                border-radius: 20px;
+                position: relative;
+                margin: 0 5px;
+
+                
+                .btn{
+                    height: 100%;
+                    width: 20px;
+                    border-radius: 100%;
+                    background-color: white;
+                    transition: 300ms;
+                    cursor: pointer;
+                }
+            }
+            .text-line{
+                margin: 0;
+                padding: 0;
+            }
         }
     }
 }
@@ -84,4 +118,11 @@ body{
     opacity: 1;
     font-size: 1.2em;
     font-weight: 600;
+}
+
+
+//public classes
+.alignRight{
+    position: absolute;
+    right: 0;
 }
