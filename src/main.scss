@@ -1,3 +1,87 @@
 body{
+    background-image: url('https://wordup411ng.com/wp-content/uploads/2015/12/dark-clouds.jpg');
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
 
+    main{
+        border: 1px solid red;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .main-Content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: rgba(230, 230, 230, 0.35);
+            width: 50%;
+            flex-direction: column;
+            height: 50%;
+            position: absolute;
+
+            h1{
+                font-size: 2.5em;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: rgb(255, 255, 255);
+                border: 1px solid red;
+                margin: 0;
+                padding: 0;
+            }
+
+            form{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                opacity: 1;
+                
+                input{
+                    background-color: transparent;
+                    height: 30px;
+                    width: 300px;
+                    border: none;
+                    border-bottom: 1px solid rgb(214, 214, 214);
+                    margin-bottom: 15px;
+                    color: white;
+
+                    &:focus{
+                        outline: none;
+                        
+                    }
+                }
+
+               .submit-btn{
+                   height: 30px;
+                   border: none;
+                   font-size: 1.2em;
+                   font-weight: 600;
+                    border-radius: 7px;
+                    color: rgb(62, 79, 110);
+                    background-color: rgba(230, 230, 230, 0.35);
+
+                   &:focus{
+                       outline: none;
+
+                   }
+               }
+            }
+
+            .data{
+                margin-left:  0;
+                color: white;
+            }
+        }
+    }
+}
+::placeholder{
+    color: white;
+    opacity: 1;
+    font-size: 1.2em;
+    font-weight: 600;
 }
