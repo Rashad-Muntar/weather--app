@@ -1,4 +1,4 @@
-# TODO List 
+# WEATHER APP 
 
 > This project is part of Javascript Module with the aim of building a weather application that consumes an API with plain Javascript
 
@@ -33,10 +33,10 @@
 
 <br/>
 
-<b>Weather app</b> The main goal of this project is to understand how to wor with API modules using webpack and more advanced ES6 features
+<b>Weather app</b> The main goal of this project is to understand how to wor with API modules using webpack and more advanced ES6 features. This application fetches the current weather of city or users desired location. User is able to toggle between between temperature Units
 
 ##Homepage
-![Screenshot from 2021-06-14 20-15-26](https://user-images.githubusercontent.com/58520480/121953648-578d8380-cd4d-11eb-9055-060a11890479.png)
+![Screenshot from 2021-06-24 01-16-04](https://user-images.githubusercontent.com/58520480/123187521-dbe8b080-d489-11eb-8e64-dae686742992.png)
 
 
 ## Watch the Live Version
@@ -52,15 +52,20 @@
 - Webpack
 - OpenWeather API Key
 
+## Getting API from OpenWeather
+- Go to `https://openweathermap.org`
+- Create an accont
+- Select the API service from the API page
+- Use API in the application
+- 
 ## Getting Started
-
 1. Open Terminal.
 2. Navigate to your desired location to download the contents of this repository.
 3. Copy and paste the following code into the Terminal :
    ```bash
-   $ git clone git@github.com:Rashad-Muntar/to-do.git
+   $ git clone https://github.com/Rashad-Muntar/weather--app.git
    ```
-4. Run `cd todo-list`
+4. Run `cd weather-app`
 5. Install the needed dependencies 
     ```bash
     $ npm install
@@ -79,6 +84,7 @@
     ```bash
     npm run test
     ```
+9. User can use the default API key for developement or you can copy pase you customized API Key.
 
 ### Usage
 Lauch the local version of this project opening the `./dist/index.html` file in the browser
@@ -96,8 +102,6 @@ Feel free to check the [issues page](https://github.com/Rashad-Muntar/to-do/issu
 - GitHub: [@Rashad-Muntar](https://github.com/Rashad-Muntar)
 - Twitter - [@RashadToure](https://twitter.com/RashadToure)
 - LinkedIn: [Rashad Muntar](https://www.linkedin.com/in/rashad-muntar/)
-
-
 
 ### Show your support
 
