@@ -44,10 +44,19 @@ body {
       -webkit-box-shadow: 0 1px 36px -12px rgba(233, 233, 233, 0.75);
       -moz-box-shadow: 0 1px 36px -12px rgba(233, 233, 233, 0.75);
       width: 50%;
-      flex-direction: column;
       height: 70%;
+      padding: 0 50px;
       position: absolute;
       margin-top: 0;
+
+      .form-section {
+        width: 50%;
+        margin-right: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
 
       .iconArea {
         display: flex;
@@ -139,11 +148,13 @@ body {
         padding: 0;
         color: orange;
         margin-top: 7px;
+        text-align: center;
       }
 
       .humidArea {
         display: flex;
         justify-content: space-between;
+        width: 170px;
 
         p {
           margin-right: 10px;
@@ -180,4 +191,72 @@ body {
 
 .hide {
   display: none !important;
+}
+
+.animationClass {
+  position: relative;
+  animation: dataContainerAnimator 2s ease 0s 1 normal forwards;
+}
+
+.loader {
+  width: 50px;
+  margin: 0 auto;
+  animation: hideLoader 4s ease 0s 1 normal forwards;
+}
+
+@keyframes dataContainerAnimator {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateX(48px);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateX(26px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateX(13px);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateX(6.5px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateX(4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87%,
+  98% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hideLoader {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }

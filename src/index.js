@@ -103,6 +103,8 @@ const condition = async (city) => {
     const data = await response.json();
     document.querySelector('.switchContainer').classList.remove('hide');
     document.querySelector('.text-line').classList.remove('hide');
+    document.querySelector('.data-section').classList.add('animationClass');
+    document.querySelector('.loader').classList.add('hide');
     weatherUpdate(data);
   } catch (err) {
     console.log(err);
@@ -114,6 +116,7 @@ const formEvent = () => {
     e.preventDefault();
     const input = document.getElementById('search').value;
     document.getElementById('search').value = '';
+    document.querySelector('.loader').classList.remove('hide');
     condition(input);
   });
 };
