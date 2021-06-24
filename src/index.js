@@ -70,6 +70,7 @@ const weatherUpdate = async (updates) => {
   cond.classList.add('class', 'temp');
   humidArea.setAttribute('class', 'humidArea');
   name.setAttribute('class', 'name');
+  celSymbol.setAttribute('class', 'symbol')
 
   name.innerHTML = updates.name;
   cond.innerHTML = updates.main.temp;
@@ -133,11 +134,13 @@ const measureSwitch = () => {
       temp = parseFloat(temp);
       temp = Math.round((temp = temp * 1.8 + 32));
       document.querySelector('.temp').innerHTML = temp;
+      document.querySelector('.symbol').innerHTML = "°F"
     } else {
       let temp = document.querySelector('.temp').textContent;
       temp = parseFloat(temp);
       temp = Math.round((temp = (temp - 32) * (5 / 9)));
       document.querySelector('.temp').innerHTML = temp;
+      document.querySelector('.symbol').innerHTML = "°C"
     }
   });
 };
