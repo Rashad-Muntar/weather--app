@@ -53,6 +53,20 @@ const fullTimeStanp = () => {
   return full;
 };
 
+const backupdate = () => {
+  const condition = document.querySelector('.currentCondition').textContent;
+  document.body.classList.add('background');
+  if (condition === 'Clouds') {
+    document.body.style.backgroundImage = 'url("./images/cloud1.jpeg")';
+  } else if (condition === 'Rain') {
+    document.body.style.backgroundImage = 'url("./images/rain.jpg")';
+  } else if (condition === 'Clear') {
+    document.body.style.backgroundImage = 'url("./images/clear.jpg")';
+  } else if (condition === 'Mist') {
+    document.body.style.backgroundImage = 'url("./images/mist.jpg")';
+  }
+};
+
 const weatherUpdate = async (updates) => {
   const dataContainer = document.querySelector('.data');
   dataContainer.innerHTML = '';
@@ -70,8 +84,8 @@ const weatherUpdate = async (updates) => {
   cond.classList.add('class', 'temp');
   humidArea.setAttribute('class', 'humidArea');
   name.setAttribute('class', 'name');
-  celSymbol.setAttribute('class', 'symbol')
-  currentCondition.setAttribute('class', 'currentCondition')
+  celSymbol.setAttribute('class', 'symbol');
+  currentCondition.setAttribute('class', 'currentCondition');
 
   name.innerHTML = updates.name;
   cond.innerHTML = updates.main.temp;
@@ -95,7 +109,7 @@ const weatherUpdate = async (updates) => {
   dataContainer.appendChild(iconArea);
   dataContainer.appendChild(currentCondition);
   dataContainer.appendChild(humidArea);
-  backupdate()
+  backupdate();
 };
 
 const condition = async (city) => {
@@ -136,33 +150,15 @@ const measureSwitch = () => {
       temp = parseFloat(temp);
       temp = Math.round((temp = temp * 1.8 + 32));
       document.querySelector('.temp').innerHTML = temp;
-      document.querySelector('.symbol').innerHTML = "°F"
+      document.querySelector('.symbol').innerHTML = '°F';
     } else {
       let temp = document.querySelector('.temp').textContent;
       temp = parseFloat(temp);
       temp = Math.round((temp = (temp - 32) * (5 / 9)));
       document.querySelector('.temp').innerHTML = temp;
-      document.querySelector('.symbol').innerHTML = "°C"
+      document.querySelector('.symbol').innerHTML = '°C';
     }
   });
 };
-
-const backupdate = () => {
-  let condition = document.querySelector('.currentCondition').textContent
-  document.body.classList.add('background')
-  if(condition === "Clouds"){
-    console.log("Cloudy")
-    document.body.style.backgroundImage = 'url("./images/cloud1.jpeg")';
-  }
-  else if(condition === "Rain"){
-    document.body.style.backgroundImage = 'url("./images/rain.jpg")';
-  }
-  else if(condition === "Clear"){
-    document.body.style.backgroundImage = 'url("./images/clear.jpg")';
-  }
-  else if(condition === "Mist"){
-    document.body.style.backgroundImage = 'url("./images/mist.jpg")';
-  }
-}
 
 measureSwitch();
