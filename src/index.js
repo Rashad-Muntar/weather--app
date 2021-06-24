@@ -71,6 +71,7 @@ const weatherUpdate = async (updates) => {
   humidArea.setAttribute('class', 'humidArea');
   name.setAttribute('class', 'name');
   celSymbol.setAttribute('class', 'symbol')
+  currentCondition.setAttribute('class', 'currentCondition')
 
   name.innerHTML = updates.name;
   cond.innerHTML = updates.main.temp;
@@ -94,6 +95,7 @@ const weatherUpdate = async (updates) => {
   dataContainer.appendChild(iconArea);
   dataContainer.appendChild(currentCondition);
   dataContainer.appendChild(humidArea);
+  backupdate()
 };
 
 const condition = async (city) => {
@@ -144,5 +146,23 @@ const measureSwitch = () => {
     }
   });
 };
+
+const backupdate = () => {
+  let condition = document.querySelector('.currentCondition').textContent
+  document.body.classList.add('background')
+  if(condition === "Clouds"){
+    console.log("Cloudy")
+    document.body.style.backgroundImage = 'url("./images/cloud1.jpeg")';
+  }
+  else if(condition === "Rain"){
+    document.body.style.backgroundImage = 'url("./images/rain.jpg")';
+  }
+  else if(condition === "Clear"){
+    document.body.style.backgroundImage = 'url("./images/clear.jpg")';
+  }
+  else if(condition === "Mist"){
+    document.body.style.backgroundImage = 'url("./images/mist.jpg")';
+  }
+}
 
 measureSwitch();

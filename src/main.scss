@@ -204,6 +204,12 @@ body {
   animation: hideLoader 4s ease 0s 1 normal forwards;
 }
 
+.background {
+  animation-name: backgroundAnim;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
 @keyframes dataContainerAnimator {
   0% {
     animation-timing-function: ease-in;
@@ -258,5 +264,15 @@ body {
 
   to {
     opacity: 0;
+  }
+}
+
+
+@keyframes backgroundAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
