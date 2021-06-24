@@ -13,9 +13,10 @@
 <body>
     <h2 class="brand"><i class="fas fa-smog"></i> WeatherGuide</h2>
     <main>
-        
-        <section class="main-Content">
-            <section class="data"></section>
+
+    <section class="main-Content">
+
+        <div class="form-section">
             <div class="switchContainer hide">
                 <p>C°</p>
                 <div class="medChange">
@@ -24,12 +25,19 @@
                 <p>F°</p>
             </div>
             <p class="text-line hide">Switch between Celsius/Fahrenheit</p>
+            <img class="loader hide" src="./images/loader.gif" alt="" srcset="">
             <form action="" id="searchForm">
                 <input type="text" id="search" placeholder="Enter city name">
                 <button class="submit-btn"><i class="fas fa-search"></i> Search</button>
             </form>
             
-        </section>
+        </div>
+
+        <div class="data-section">
+            <section class="data"></section>
+        </div>
+        
+    </section>
     </main>
 
     <script src="main.js"></script>
