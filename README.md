@@ -33,7 +33,7 @@
 
 <br/>
 
-<b>Weather app</b> The main goal of this project is to understand how to wor with API modules using webpack and more advanced ES6 features. This application fetches the current weather of city or users desired location. User is able to toggle between between temperature Units
+<b>Weather app</b> The main goal of this project is to understand how to wor with API modules using webpack and more advanced ES6 features. This application fetches the current weather of a city or users any desired location. User is able to toggle between temperature Units
 
 ##Homepage
 ![Screenshot from 2021-06-24 01-16-04](https://user-images.githubusercontent.com/58520480/123187521-dbe8b080-d489-11eb-8e64-dae686742992.png)
@@ -41,7 +41,7 @@
 
 ## Watch the Live Version
 
-[Live Demo](https://rashad-muntar.github.io/to-do/)
+[Live Demo](https://rashad-muntar.github.io/weather--app/)
 
 ### Prerequisites
 
