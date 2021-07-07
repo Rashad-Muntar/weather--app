@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <title>Weather</title>
+</head>
+<body>
+    <h2 class="brand"><i class="fas fa-smog"></i> WeatherGuide</h2>
+    <main>
+
+    <section class="main-Content">
+
+        <div class="form-section">
+            <div class="switchContainer hide">
+                <p>C°</p>
+                <div class="medChange">
+                    <div class=btn></div>
+                </div>
+                <p>F°</p>
+            </div>
+            <p class="text-line hide">Switch between Celsius/Fahrenheit</p>
+            <img class="loader hide" src="./images/loader.gif" alt="" srcset="">
+            <form action="" id="searchForm">
+                <input type="text" id="search" placeholder="Enter city name">
+                <button class="submit-btn"><i class="fas fa-search"></i> Search</button>
+            </form>
+            
+        </div>
+
+        <div class="data-section">
+            <section class="data"></section>
+        </div>
+        
+    </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
